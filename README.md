@@ -1,2 +1,66 @@
-# freelance-wordpress-landing-demo
-Luma: personal WordPress/Elementor landing page with a PHP-validated enquiry preview, editable sections and browser tests.
+# Luma — an editable WordPress landing page
+
+A personal WordPress / Elementor demonstration by **Ivan Delgado**, created with AI assistance. Luma is a fictional service brand. The project shows a focused landing page, mobile layout work and a small WordPress REST integration.
+
+[![Checks](https://github.com/ivaaandeelgado/freelance-wordpress-landing-demo/actions/workflows/checks.yml/badge.svg)](https://github.com/ivaaandeelgado/freelance-wordpress-landing-demo/actions/workflows/checks.yml)
+
+![Luma desktop screenshot](docs/screenshots/desktop.png)
+
+## What works
+
+- Editable Elementor containers, headings, service cards, buttons and FAQ content.
+- Responsive layout, anchor navigation and an original CSS illustration; no external fonts or stock images.
+- Enquiry preview validated by an actual PHP endpoint, including field limits, allowed services, nonce verification and a honeypot.
+- Clear pending, field-error, connection-error and success states; retry preserves the visitor's text.
+- Reproducible WordPress setup and an exportable Elementor template with its companion plugin.
+
+The form sends synthetic input **only to the local WordPress server**. It does not email anyone, save enquiries or contact third-party services.
+
+## Run in three steps
+
+Requires **Node.js 24**, npm and internet access for the initial WordPress / Elementor downloads.
+
+```sh
+npm ci
+npm start
+# Wait for "Personal Elementor demo ready", then open http://127.0.0.1:9417
+```
+
+On Windows PowerShell, use `npm.cmd` if script execution is disabled. `npm start` builds the blueprint automatically. Stop with Ctrl+C. The runtime binds to loopback and is recreated on every start.
+
+For the local editor, visit `/wp-admin/` and use the **synthetic disposable** login `admin` / `local-demo-only`. Open **Pages → Luma → Edit with Elementor**. Export editor-only changes before restarting.
+
+## Check the behavior
+
+Stop any manually started demo server first. Install Google Chrome, then run:
+
+```sh
+npm test
+```
+
+Seven Playwright checks cover the rendered Elementor page, desktop/mobile layout, valid and invalid submissions, server-side validation, missing nonce, honeypot, payload limits and a failed-request retry. Tests start and stop their own server. Screenshots and JSON results go to ignored `evidence/`.
+
+CI uses Playwright Chromium on a standard Ubuntu runner. It runs checks only; no hosting or deployment is configured. The local verification summary is in [docs/verification.json](docs/verification.json).
+
+## How it is built
+
+| File | Responsibility |
+| --- | --- |
+| `build-blueprint.mjs` | Native Elementor content and disposable WordPress setup |
+| `luma-demo.php` | Namespaced plugin and `POST /wp-json/luma-demo/v1/enquiries` |
+| `demo.js` | Input feedback, pending state and retry behavior |
+| `demo.css` | Responsive design and CSS illustration |
+| `serve.mjs` | Loopback-only Playground runtime |
+| `tests/` | Browser and HTTP behavior checks |
+
+The endpoint is enabled only by the demo's `luma_demo_mode` option. Nonces are a request check, not authentication or rate limiting for a production contact service.
+
+`npm run build` generates `artifacts/elementor-template.json` and `artifacts/personal-landing-demo/`. Importing the template into another WordPress instance also requires Elementor and the companion plugin. The disposable runtime is for inspection, not storage of real enquiries.
+
+## Handover scope
+
+For a real landing-page task, agree the supplied design/content, target breakpoints and acceptance checks first. Real email delivery, persistence, spam controls and production deployment are separate integrations. This demo claims no customers, testimonials or commercial results. Mobile checks emulate a viewport rather than a physical device.
+
+[Mobile screenshot](docs/screenshots/mobile.png) · [Validated enquiry](docs/screenshots/enquiry-validated.png)
+
+Original demo code is **GPL-2.0-or-later**; see [LICENSE](LICENSE). Dependencies retain their licenses. Implementation references: [WordPress Playground CLI](https://wordpress.github.io/wordpress-playground/developers/local-development/wp-playground-cli/) and [Elementor data structure](https://developers.elementor.com/docs/data-structure/).
