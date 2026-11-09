@@ -1,0 +1,45 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "7.1.4"
+  },
+  "features": {
+    "networking": false
+  },
+  "steps": [
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Luma — Native Blocks",
+        "blogdescription": "Personal editing-workflow demonstration",
+        "admin_email": "demo@example.test"
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/theme/kadence.1.6.0.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/luma-native.html",
+      "data": "<!-- wp:group {\"style\":{\"spacing\":{\"padding\":{\"top\":\"40px\",\"bottom\":\"40px\",\"left\":\"32px\",\"right\":\"32px\"}},\"border\":{\"radius\":\"20px\"}},\"backgroundColor\":\"theme-palette3\",\"textColor\":\"theme-palette9\",\"layout\":{\"type\":\"constrained\"}} -->\n<div class=\"wp-block-group has-theme-palette-9-color has-theme-palette-3-background-color has-text-color has-background\" style=\"border-radius:20px;padding-top:40px;padding-right:32px;padding-bottom:40px;padding-left:32px\"><!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"12px\",\"letterSpacing\":\"1.5px\"}}} -->\n<p style=\"font-size:12px;letter-spacing:1.5px\">PERSONAL CONCEPT · NATIVE WORDPRESS BLOCKS</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"style\":{\"typography\":{\"fontSize\":\"clamp(34px, 4vw, 56px)\",\"lineHeight\":\"1.1\"}},\"textColor\":\"theme-palette9\"} -->\n<h2 class=\"wp-block-heading has-theme-palette-9-color has-text-color\" style=\"font-size:clamp(34px, 4vw, 56px);line-height:1.1\">Small changes. A clearer website.</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>A focused landing page, a more comfortable mobile layout, or content that finally says what matters. Start with one useful improvement.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"theme-palette1\",\"textColor\":\"theme-palette9\"} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-theme-palette-9-color has-theme-palette-1-background-color has-text-color has-background wp-element-button\" href=\"#services\">Explore services</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:group -->\n\n<!-- wp:heading {\"anchor\":\"services\"} -->\n<h2 id=\"services\" class=\"wp-block-heading\">A little focus. A better first impression.</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Choose one clear piece of work, agree the content and check the result together.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:group {\"style\":{\"spacing\":{\"padding\":{\"top\":\"24px\",\"bottom\":\"24px\",\"left\":\"24px\",\"right\":\"24px\"}},\"border\":{\"radius\":\"16px\"}},\"backgroundColor\":\"theme-palette8\",\"layout\":{\"type\":\"constrained\"}} -->\n<div class=\"wp-block-group has-theme-palette-8-background-color has-background\" style=\"border-radius:16px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px\"><!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Landing pages</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Turn supplied content and a clear design into an editable page with one purpose.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:group --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:group {\"style\":{\"spacing\":{\"padding\":{\"top\":\"24px\",\"bottom\":\"24px\",\"left\":\"24px\",\"right\":\"24px\"}},\"border\":{\"radius\":\"16px\"}},\"backgroundColor\":\"theme-palette8\",\"layout\":{\"type\":\"constrained\"}} -->\n<div class=\"wp-block-group has-theme-palette-8-background-color has-background\" style=\"border-radius:16px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px\"><!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Mobile layout fixes</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Make headings, spacing and buttons comfortable to use on smaller screens.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:group --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:group {\"style\":{\"spacing\":{\"padding\":{\"top\":\"24px\",\"bottom\":\"24px\",\"left\":\"24px\",\"right\":\"24px\"}},\"border\":{\"radius\":\"16px\"}},\"backgroundColor\":\"theme-palette8\",\"layout\":{\"type\":\"constrained\"}} -->\n<div class=\"wp-block-group has-theme-palette-8-background-color has-background\" style=\"border-radius:16px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px\"><!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Content updates</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Refresh existing sections, links and service information without rebuilding the whole site.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:group --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">A clear process</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p><strong>1. Agree the scope.</strong> List the sections, supplied assets and expected result.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>2. Build and check.</strong> Review the page at desktop, tablet and mobile widths.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>3. Hand it over.</strong> Keep ordinary text and links editable in WordPress.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">A few practical questions</h2>\n<!-- /wp:heading -->\n\n<!-- wp:details -->\n<details class=\"wp-block-details\"><summary>Can I edit the content myself?</summary><!-- wp:paragraph -->\n<p>Yes. These headings, paragraphs, cards, buttons and FAQs are native WordPress blocks. The example includes a verified editing workflow.</p>\n<!-- /wp:paragraph --></details>\n<!-- /wp:details -->\n\n<!-- wp:details -->\n<details class=\"wp-block-details\"><summary>Is this a real service business?</summary><!-- wp:paragraph -->\n<p>No. Luma is a personal portfolio demonstration with fictional branding. This page does not collect enquiries or process payments.</p>\n<!-- /wp:paragraph --></details>\n<!-- /wp:details -->\n\n<!-- wp:group {\"style\":{\"spacing\":{\"padding\":{\"top\":\"32px\",\"bottom\":\"32px\",\"left\":\"24px\",\"right\":\"24px\"}},\"border\":{\"radius\":\"16px\"}},\"backgroundColor\":\"theme-palette8\",\"layout\":{\"type\":\"constrained\"},\"anchor\":\"contact\"} -->\n<div id=\"contact\" class=\"wp-block-group has-theme-palette-8-background-color has-background\" style=\"border-radius:16px;padding-top:32px;padding-right:24px;padding-bottom:32px;padding-left:24px\"><!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Start with one small change.</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This is a demonstration, so there is no contact submission. Explore the service sections and inspect how the page is built.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"theme-palette1\",\"textColor\":\"theme-palette9\"} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-theme-palette-9-color has-theme-palette-1-background-color has-text-color has-background wp-element-button\" href=\"#services\">Review the services</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:group -->\n\n<!-- wp:paragraph -->\n<p>Personal work by Ivan Delgado, created with AI assistance. No client projects or commercial results are claimed.</p>\n<!-- /wp:paragraph -->\n"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire_once '/wordpress/wp-load.php';\nwp_set_current_user(1);\n$page = wp_insert_post(['post_title' => 'Luma — Native WordPress Demo', 'post_type' => 'page', 'post_status' => 'publish', 'post_content' => file_get_contents('/wordpress/wp-content/luma-native.html')]);\nif (is_wp_error($page)) { throw new Exception($page->get_error_message()); }\nupdate_option('show_on_front', 'page');\nupdate_option('page_on_front', $page);\nupdate_option('blog_public', 0);\n$sample = get_page_by_path('sample-page');\nif ($sample) { wp_update_post(['ID' => $sample->ID, 'post_status' => 'draft']); }\nupdate_user_meta(1, 'show_admin_bar_front', 'false');\nwp_update_user(['ID' => 1, 'user_email' => 'demo@example.test', 'display_name' => 'Personal Demo']);\nwp_set_password('local-demo-only', 1);\nfile_put_contents('/wordpress/wp-content/native-demo.json', wp_json_encode(['page_id' => $page, 'editor' => 'WordPress core block editor', 'theme' => wp_get_theme()->get('Name'), 'theme_version' => wp_get_theme()->get('Version')]));\n"
+    },
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "local-demo-only"
+    }
+  ]
+}

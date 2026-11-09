@@ -1,0 +1,39 @@
+{
+  "startedAtUtc": "2026-11-09T09:13:11.590Z",
+  "environment": "Chrome on Windows; desktop and touch tablet viewport emulation. Not a physical iPad or Safari test.",
+  "checks": [
+    "Desktop content, service anchor and native FAQ work.",
+    "Frontend fits a 390px mobile viewport.",
+    "All 36 native blocks load without validation errors in the editor.",
+    "Touch-emulated tablet: change heading through editor controls, tap Save and verify the published page.",
+    "Saved text survives frontend reload."
+  ],
+  "errors": [],
+  "runtime": {
+    "page_id": 4,
+    "editor": "WordPress core block editor",
+    "theme": "Kadence",
+    "theme_version": "1.6.0"
+  },
+  "mobile": {
+    "viewport": 390,
+    "document": 390
+  },
+  "blocks": {
+    "count": 36,
+    "invalid": [],
+    "names": [
+      "core/group",
+      "core/paragraph",
+      "core/heading",
+      "core/buttons",
+      "core/button",
+      "core/columns",
+      "core/column",
+      "core/details"
+    ]
+  },
+  "cleanup": "Original demo text restored through WordPress REST API.",
+  "passed": true,
+  "finishedAtUtc": "2026-11-09T09:13:45.408Z"
+}

@@ -69,6 +69,8 @@ The endpoint is enabled only by the demo's `luma_demo_mode` option. Nonces are a
 
 ## Handover scope
 
+For projects that need the native block editor, see the [small core-block editing example](examples/native-blocks/README.md). It uses the Kadence theme and includes a checked tablet-viewport editing flow. Physical iPad/Safari verification remains a separate acceptance check.
+
 For a real landing-page task, agree the supplied design/content, target breakpoints and acceptance checks first. Real email delivery, persistence, spam controls and production deployment are separate integrations. This demo claims no customers, testimonials or commercial results. Mobile checks emulate a viewport rather than a physical device.
 
 [Mobile screenshot](docs/screenshots/mobile.png) · [Validated enquiry](docs/screenshots/enquiry-validated.png)
