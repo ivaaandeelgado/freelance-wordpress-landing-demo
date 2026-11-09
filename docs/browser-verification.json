@@ -1,0 +1,55 @@
+{
+  "startedAtUtc": "2026-11-09T08:57:26.564Z",
+  "mode": "public-unmodified-url",
+  "url": "https://playground.wordpress.net/?mode=seamless&blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fivaaandeelgado%2Ffreelance-wordpress-landing-demo%2Fmain%2Fdocs%2Fplayground.json",
+  "checks": [
+    {
+      "check": "real Elementor landing page loaded"
+    },
+    {
+      "check": "service anchor navigation"
+    },
+    {
+      "check": "empty form rejected"
+    },
+    {
+      "check": "PHP validates fictional enquiry",
+      "result": "Checked by WordPress, Alex Taylor. Your enquiry is valid. Demo only: no email was sent and nothing was saved."
+    },
+    {
+      "check": "server rejects invalid fields and missing nonce",
+      "invalidStatus": 422,
+      "missingNonceStatus": 403
+    },
+    {
+      "check": "mobile layout and FAQ"
+    },
+    {
+      "check": "WordPress admin page list available",
+      "titles": [
+        "Luma — Personal Demo",
+        "Privacy Policy",
+        "Sample Page"
+      ]
+    }
+  ],
+  "errors": [],
+  "expectedValidationErrors": [
+    {
+      "message": "Failed to load resource: the server responded with a status of 422 ()",
+      "url": "Demo WordPress REST endpoint (browser sandbox)"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 403 ()",
+      "url": "Demo WordPress REST endpoint (browser sandbox)"
+    }
+  ],
+  "viewport": {
+    "viewport": 390,
+    "document": 390
+  },
+  "passed": true,
+  "finishedAtUtc": "2026-11-09T08:57:45.731Z",
+  "environment": "Google Chrome on Windows; isolated browser context",
+  "source_commit": "881705a320c1d7a092d75297ceb60ee02ed46924"
+}
