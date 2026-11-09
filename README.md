@@ -6,6 +6,14 @@ A personal WordPress / Elementor demonstration by **Ivan Delgado**, created with
 
 ![Luma desktop screenshot](docs/screenshots/desktop.png)
 
+## Try it in your browser
+
+[**Open the interactive Luma demo**](https://playground.wordpress.net/?mode=seamless&blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fivaaandeelgado%2Ffreelance-wordpress-landing-demo%2Fmain%2Fdocs%2Fplayground.json)
+
+Allow the initial WordPress and Elementor download to finish. Try the service links, open a FAQ and submit fictional details to see PHP validation. No installation or account is needed. WordPress Playground runs this separate demo in your browser; it does not send email, save enquiries or take payments. Keep real personal details out of the demo.
+
+To inspect the editable WordPress page, [open with Playground controls](https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fivaaandeelgado%2Ffreelance-wordpress-landing-demo%2Fmain%2Fdocs%2Fplayground.json) and go to `/wp-admin/`. The synthetic admin is signed in automatically. Browser state may persist locally; this is a portfolio sandbox, not production hosting.
+
 ## What works
 
 - Editable Elementor containers, headings, service cards, buttons and FAQ content.
@@ -14,7 +22,7 @@ A personal WordPress / Elementor demonstration by **Ivan Delgado**, created with
 - Clear pending, field-error, connection-error and success states; retry preserves the visitor's text.
 - Reproducible WordPress setup and an exportable Elementor template with its companion plugin.
 
-The form sends synthetic input **only to the local WordPress server**. It does not email anyone, save enquiries or contact third-party services.
+The form sends synthetic input **only to the demo WordPress runtime** (in your browser, or on localhost with the setup below). It does not email anyone, save enquiries or contact third-party services.
 
 ## Run in three steps
 
@@ -41,6 +49,8 @@ npm test
 Seven Playwright checks cover the rendered Elementor page, desktop/mobile layout, valid and invalid submissions, server-side validation, missing nonce, honeypot, payload limits and a failed-request retry. Tests start and stop their own server. Screenshots and JSON results go to ignored `evidence/`.
 
 CI uses Playwright Chromium on a standard Ubuntu runner. It runs checks only; no hosting or deployment is configured. The local verification summary is in [docs/verification.json](docs/verification.json).
+
+`npm run build:browser` refreshes the published browser blueprint from the same application source. `npm run check:browser` checks the public Playground link using installed Chrome; add `-- --local-blueprint` to inspect an unpublished blueprint first. Reports go to ignored `test-results/playground/`.
 
 ## How it is built
 
