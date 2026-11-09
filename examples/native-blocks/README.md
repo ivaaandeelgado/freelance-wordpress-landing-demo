@@ -28,3 +28,5 @@ The test uses Chrome on Windows with a tablet-sized touch emulation. **A physica
 All copy is fictional personal demo content created with AI assistance. There is no enquiry collection, payment flow, email delivery, analytics or customer data. The browser runtime needs internet access to download WordPress and the free theme initially; no production hosting is deployed.
 
 See [the local editing verification](../../docs/native-editing-verification.json). The main repository's CI checks cover the Elementor example; this additional editing example has the separate checks described here.
+
+The [public browser verification](../../docs/native-browser-verification.json) also checks the published blueprint, frontend links, FAQ, mobile width and all 36 blocks in the editor. Reproduce it from the repository root with `node tools/check-native-playground.mjs`.

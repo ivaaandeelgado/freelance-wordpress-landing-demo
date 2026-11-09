@@ -1,0 +1,33 @@
+{
+  "startedAtUtc": "2026-11-09T09:21:40.973Z",
+  "url": "https://playground.wordpress.net/?mode=seamless&blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fivaaandeelgado%2Ffreelance-wordpress-landing-demo%2Fmain%2Fdocs%2Fnative-playground.json",
+  "mode": "public-unmodified-url",
+  "checks": [
+    "Published blueprint loads the native WordPress page.",
+    "Service anchor navigation works.",
+    "Native FAQ opens.",
+    "Frontend stays within a 390px mobile viewport.",
+    "Published blueprint opens in the editor with 36 valid core blocks."
+  ],
+  "errors": [],
+  "mobile": {
+    "viewport": 390,
+    "document": 390
+  },
+  "blocks": {
+    "count": 36,
+    "invalid": [],
+    "names": [
+      "core/group",
+      "core/paragraph",
+      "core/heading",
+      "core/buttons",
+      "core/button",
+      "core/columns",
+      "core/column",
+      "core/details"
+    ]
+  },
+  "passed": true,
+  "finishedAtUtc": "2026-11-09T09:22:03.211Z"
+}
